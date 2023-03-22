@@ -78,6 +78,13 @@ class ProductController extends Controller
      */
     public function deleteProduct(string $id)
     {
-        //
+
+        $response = Http::delete('http://127.0.0.1:8000/api/product/' . $id);
+
+        // if (!$response->ok())
+
+        return redirect()->action([IndexController::class, 'showIndex']);
+        
+        
     }
 }
