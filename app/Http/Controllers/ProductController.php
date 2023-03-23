@@ -14,8 +14,6 @@ class ProductController extends Controller
 
         $response = Http::get('http://127.0.0.1:8000/api/categories');
 
-        // if (!$response->ok()) return;
-
         $categories = json_decode($response);
 
         return view('newProduct', compact('categories'));
@@ -32,6 +30,7 @@ class ProductController extends Controller
             'weight' =>  $request->weight,
             'isAvailable' =>  $request->isAvailable,
             'qty' =>  $request->qty,
+            'image' =>  $request->image,
             'category' =>  $request->category,
         ]);
     
@@ -77,6 +76,7 @@ class ProductController extends Controller
         'weight' =>  $request->weight,
         'isAvailable' =>  $request->isAvailable,
         'qty' =>  $request->qty,
+        'image' =>  $request->image,
         'category' =>  $request->category,
     ]);
 
