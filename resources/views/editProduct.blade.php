@@ -41,6 +41,10 @@
           <label for="formGroupExampleInput" class="form-label">Product stock</label>
           <input type="text" name="qty" value="{{$productArray->qty}}" class="form-control" id="formGroupExampleInput" placeholder="Enter product stock">
         </div>
+        <div class="mb-4">
+          <label for="formGroupExampleInput" class="form-label">Product image</label>
+          <input type="text" name="image" value="{{$productArray->image}}" class="form-control" id="formGroupExampleInput">
+        </div>
         <div class="mb-5">
           <select class="form-select" name="category" aria-label="Default select example">
             selected
